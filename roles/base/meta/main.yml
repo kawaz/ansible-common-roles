@@ -1,4 +1,4 @@
 ---
 dependencies:
-  - { role: ../common/roles/localize }
-  - { role: ../common/roles/postfix }
+  - { role: ../ansible-common-roles/roles/localize }
+  - { role: ../ansible-common-roles/roles/postfix }
