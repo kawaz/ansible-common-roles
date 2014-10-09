@@ -1,0 +1,3 @@
+# http://docs.ansible.com/galaxy.html#advanced-control-over-role-requirements-files
+
+- src: magnus919.epel

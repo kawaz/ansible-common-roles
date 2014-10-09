@@ -1,0 +1,22 @@
+---
+#- name: "uninstall http-tools"
+#  yum:  name=http-tools state=absent
+
+- name: "install php55"
+  yum:  name={{item}} state=present
+  with_items:
+    - httpd24
+    - php55
+    - php55-php-cli
+    - php55-php-gd
+    - php55-php-mbstring
+    #- php55-mcrypt
+    - php55-php-mysqlnd
+    - php55-php-pgsql
+    #- php55-pecl-apc
+    #- php55-pecl-imagick
+    #- php55-pecl-memcached
+  notify: restart httpd
+
+- name: start httpd
+  service: name=httpd24-httpd state=started enabled=yes

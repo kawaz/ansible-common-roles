@@ -1,0 +1,8 @@
+- hosts: all
+  sudo: yes
+  vars:
+  roles:
+    - { role: magnus919.epel, when: ansible_os_family == 'RedHat' }
+    - base
+
+- src: magnus919.epel
